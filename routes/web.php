@@ -32,7 +32,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['role:admin|supervisor']], f
     Route::resource('cases','IncidentController');
 });
 
-Route::group(['prefix' => 'officer', 'middleware' => ['role:admin|supervisor|laboratory-technician|officer']], function (){
+Route::group(['prefix' => 'officer', 'middleware' => ['role:admin|supervisor|laboratory-technician|field-officer']], function (){
     Route::get('patient/{id}/sample','SampleController@process');
     Route::resource('patients', 'PatientController');
     Route::resource('samples', 'SampleController');

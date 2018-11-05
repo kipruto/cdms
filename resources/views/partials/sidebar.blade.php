@@ -24,37 +24,42 @@
                         <p> Management<i class="right fa fa-angle-left"></i></p>
                     </a>
                     <ul class="nav nav-treeview">
-                        @ability('admin, supervisor', 'user-*')
+                       @permission('user-*')
                         <li class="nav-item -align-right">
                             <a href="{{url('admin/users')}}" class="nav-link">
                                 <i class="fas fa-users-cog indigo"></i>
                                 <p> User Management</p>
                             </a>
                         </li>
+                        @endpermission
 
+                        @permission('role-*')
                         <li class="nav-item -align-right">
                             <a href="{{url('admin/roles')}}" class="nav-link">
                                 <i class="fas fa-chart-pie yellow"></i>
                                 <p>Role Management</p>
                             </a>
                         </li>
-
+                        @endpermission
+                        @permission('station-*')
                         <li class="nav-item -align-right">
                             <a href="{{url('admin/subcounties')}}" class="nav-link">
                                 <i class="far fa-hospital orange"></i>
                                 <p>Field Station Management</p>
                             </a>
                         </li>
-
+                        @endpermission
+                        @permission('drug-*')
                         <li class="nav-item -align-right">
                             <a href="#" class="nav-link">
                                 <i class="fas fa-pills green"></i>
                                 <p> Drug Management</p>
                             </a>
                         </li>
-                        @endability
+                        @endpermission
+                        
 
-                        @ability('admin, supervisor, laboratory-technician, officer', '*')
+                        @ability('admin, supervisor, laboratory-technician, field-officer', '*')
                         <li class="nav-item -align-right">
                             @if(Auth::check())
                                 @if(Auth::user()->hasRole('admin') || Auth::user()->hasRole('supervisor'))
@@ -72,10 +77,10 @@
 
                         </li>
                         @endability
-                        @ability('admin, supervisor, laboratory-technician', '*')
+                        @ability('admin, supervisor, laboratory-technician, field-officer', '*')
                         <li class="nav-item -align-right">
                             @if(Auth::check())
-                                @if(Auth::user()->hasRole('admin'))
+                                @if(Auth::user()->hasRole('admin') || Auth::user()->hasRole('supervisor'))
                                     <a href="{{url('admin/cases')}}" class="nav-link">
                                         <i class="fas fa-wheelchair blue"></i>
                                         <p> Case Management</p>

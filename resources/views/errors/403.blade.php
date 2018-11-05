@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
-                <h1>You don't have permission.</h1>
+                <h1>You don't have permission to access this resource, please contact your administrator.</h1>
             </div>
         </div>
     </div>
