@@ -1,0 +1,105 @@
+
+// Body
+$body-bg: #ffffff;
+
+// Typography
+$font-family-sans-serif: "Nunito", sans-serif;
+$font-size-base: 0.9rem;
+$line-height-base: 1.6;
+
+// Colors
+$blue: #007AFF;
+$indigo: #651AF2;
+$purple: #6E44C0;
+$pink: #E7408B;
+$red: #DB3847;
+$orange: #FD7D1A;
+$yellow: #FFBF0D;
+$green: #2EA547;
+$teal: #28C896;
+$cyan: #1FA1B7;
+
+.purple  {
+    color: $purple;
+}
+.pink {
+    color: $pink;
+}
+
+.red {
+    color: $red;
+}
+.orange {
+    color: $orange;
+}
+.yellow {
+    color: $yellow;
+}
+.green {
+    color: $green;
+}
+.blue {
+    color: $blue;
+}
+.indigo {
+    color: $indigo;
+}
+
+.label-onsite {
+    background-color: red;
+    color: #ffffff;
+}
+.label-dispatched {
+    background-color: deeppink;
+    color: #ffffff;
+}
+.label-received {
+    background-color: $blue;
+    color: #ffffff;
+}
+.label-processed {
+    background-color: $green;
+    color: #ffffff;
+}
+
+.btn-indigo {
+    background-color: $indigo;
+    color: #ffffff;
+}
+
+.alert-ok {
+    background-color: #D3ECD9;
+    color: #0b2e13;
+}
+
+.pagination .page-link {
+    position: relative;
+    display: block;
+    padding: 0.5rem 0.75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: $green;
+    background-color: #ffffff;
+    border: 1px solid $green;
+}
+
+.page-item.disabled .page-link {
+    color: #868e96;
+    pointer-events: none;
+    cursor: auto;
+    background-color: #0b2e13;
+    border-color: #718393;
+}
+
+.pagination .page-item.active .page-link {
+    color: #fff;
+    background-color: $green;
+    border-color: $green;
+}
+
+.pagination .page-link:focus, .page-link:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: #003C00;
+    border-color: #AEFF5E;
+}
